@@ -2,7 +2,7 @@
   "permissions": {
     "deny": [
       "Read(.dev.vars)",
-      "Write(.dev.vars)"
+      "Edit(.dev.vars)"
     ]
   }
 }
