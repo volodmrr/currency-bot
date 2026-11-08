@@ -1,7 +1,7 @@
 import type { Env, StoredMessage } from './types'
 
 const OWNER = 'volodmrr'
-const REPO = 'c1-bot'
+const REPO = 'currency-bot'
 const BRANCH = 'main'
 const API = 'https://api.github.com'
 const STATE_PATH = 'data/state.json'

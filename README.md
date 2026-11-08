@@ -1,4 +1,4 @@
-# c1-bot
+# currency-bot
 
 Cloudflare Worker that scrapes a Telegram channel for FX rates and commits them to this repo.
 

@@ -1,4 +1,4 @@
-name = "c1-bot"
+name = "currency-bot"
 main = "src/index.ts"
 compatibility_date = "2026-07-17"
 
