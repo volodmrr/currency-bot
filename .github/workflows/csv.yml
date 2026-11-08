@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 # One build at a time; the trigger paths (data/rates) and the commit
-# target (data/google) are disjoint, so committing back never re-triggers.
+# target (data/*.csv) are disjoint, so committing back never re-triggers.
 concurrency:
   group: build-csv
   cancel-in-progress: false
@@ -39,12 +39,12 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             node scripts/build-csv.mjs
-            if [[ -z "$(git status --porcelain data/google)" ]]; then
+            if [[ -z "$(git status --porcelain data/*.csv)" ]]; then
               echo "no CSV changes"
               exit 0
             fi
-            git add data/google
-            git commit -m "csv: buy-usd.csv"
+            git add data/*.csv
+            git commit -m "csv: google tables"
             if git push origin HEAD:main; then
               echo "pushed on attempt $attempt"
               exit 0
